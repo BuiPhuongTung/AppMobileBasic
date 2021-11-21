@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { NavigationContainer } from '@react-navigation/native';
 import Screen1 from './logo'
-//Checkout dev/bao
+
 
 export default class IntroComponent extends React.Component {
   constructor(props) {

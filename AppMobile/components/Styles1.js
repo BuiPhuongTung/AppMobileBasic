@@ -1,15 +1,12 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
-        height: '100%',
-        width: '100%',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#e0dfdb',
     },
     title: {
-        justifyContent: 'center',
         fontSize: 30, 
         fontWeight: "bold",
         textAlign: 'center'
@@ -39,9 +36,6 @@ const styles = StyleSheet.create({
         height: 40,
         width: '100%',
         backgroundColor: 'yellow',
-    },
-    icon:{
-        
     },
 });
 export default styles;

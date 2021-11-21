@@ -8,9 +8,9 @@ import {
 
 
 export default Screen1 = props => {
-  setTimeout(() => {
-    props.navigation.replace("Home");
-  }, 3000);
+    setTimeout(() => {
+      props.navigation.replace("Home");
+    }, 2000);
     return(
         <SafeAreaView style={{height: '100%', width: '100%', backgroundColor: '#baffec'}}>
           <View style={{height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center'}}>

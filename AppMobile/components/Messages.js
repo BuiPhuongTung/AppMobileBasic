@@ -1,34 +1,37 @@
-import React,{Component} from 'react';
-import {
-    View,
-    Text,
-    SafeAreaView,
-    TouchableOpacity
-} from 'react-native'
+import React from 'react';
+import {StyleSheet, View, Text, Image, TouchableOpacity, Button} from 'react-native';
+import AppIntroSlider from 'react-native-app-intro-slider';
+import { NavigationContainer } from '@react-navigation/native';
+//import style
+import styles from "./Styles1"
 
-export default Messages = ({navigation}) => {
-    return(
-        <SafeAreaView style={{height: '100%', width: '100%', backgroundColor: '#fca788'}}>
-          <View style={{height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
-            <View style={{height: '50%', width: '100%', justifyContent: 'flex-end', alignItems: 'center'}}>
-              <Text style={{fontSize: 18}}>
-                Webview - Messages
-              </Text>
-              <Text style={{fontSize: 16}}>
-                Link: Messages.html
-              </Text>
+export default class Messages extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          messages: false,
+        };
+    }
+    render() {
+        if (this.state.messages) {
+          return <App />;
+        } else {
+          return (
+            <View style={styles.container}>
+                <Text style={styles.title}>
+                    WebView - Messages
+                </Text>
+                <Text style={styles.link}>
+                    link: Messages.html 
+                </Text>
+                <TouchableOpacity style={styles.btn} onPress = {() => {
+                    this.props.navigation.navigate("vnexpress1");}}>
+                    <Text  style={styles.txt}>
+                        Touch to go vnexpress.net
+                    </Text>
+                </TouchableOpacity> 
             </View>
-            <View style={{height: '50%', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
-              <TouchableOpacity onPress = {() => {
-                navigation.navigate("vnexpress1");
-                }}>
-                  <Text>
-                      Touch go to vnexpress.net
-                  </Text>
-              </TouchableOpacity>
-            </View>
-          </View>   
-        </SafeAreaView>
-    )
+          );
+        }
+      }
 }
-
